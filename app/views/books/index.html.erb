@@ -1,18 +1,22 @@
 <h1>Books</h1>
 <% @books.each do |book| %>
-  <p>Title</p>
-  <span>
-    <%= link_to book.title, book_path(book.id) %>
-  </span>
+  <div class="book-box">
+    <h3>本のタイトル</h3>
+    <span class="book-title"><%= book.title %></span>
+    <h3>感想</h3>
+    <span class="book-body"><%= book.body %></span>
+    
+    <%= link_to "編集", edit_book_path(book.id) %>
+    <%= link_to "削除", book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+  </div>
 <% end %>
 
-
 <h2>New book</h2>
-<%= form_with model: @Book, url: '/books', method: :post do |f| %>
-  <h4>Title</h4>
+<%= form_with model: @books, url: '/books', method: :post do |f| %>
+  <h3>本のタイトル</h3>
   <%= f.text_field :title %>
-  <h4>Body</h4>
+  <h3>感想</h3>
   <%= f.text_area :body %>
 	
-  <%= f.submit 'Create Book' %>
+  <%= f.submit '投稿' %>
 <% end %>
