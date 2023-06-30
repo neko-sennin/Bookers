@@ -14,17 +14,27 @@
  *= require_self
  */
  
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ 
+ body {
+  display: block;
+  margin: 8px;
+ }
+ 
+ h1, book-box {
+  display: block;
+ }
+ 
  h1 {
   font-size: 25px;
  }
  
  h2 {
   font-size: 22px;
- }
- 
- h3 {
-  font-size: 15px;
-  float: left;
  }
  
  h4 {
@@ -36,7 +46,7 @@
   padding: 10px;
  }
  
-.book-box {
+.book-comment {
   display: flex;
 }
 

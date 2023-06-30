@@ -1,13 +1,18 @@
-<div>
-    <%= flash[:notice] %>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div><%= flash[:notice] %></div>
+    <h4>本のタイトル :</h4>
+    <p><%= @book.title %></p>
+    <h4>感想 :</h4>
+    <p><%= @book.body %></p>
 
-
-<h4>本のタイトル</h4>
-<p><%= @book.title %></p>
-
-<h4>感想</h4>
-<p><%= @book.body %></p>
-
-<%= link_to "編集", edit_book_path(@book.id) %>
-<a href="https://ad3ff278f2dc42b1a70b7ea09f17141a.vfs.cloud9.ap-northeast-1.amazonaws.com/books">戻る</a>
+    <p>
+      <%= link_to "編集", edit_book_path(@book.id) %> |
+      <%= link_to "戻る", books_path %>
+    </p>
+  </body>
+</html>
