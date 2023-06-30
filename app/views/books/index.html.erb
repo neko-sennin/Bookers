@@ -7,14 +7,7 @@
     <div class="list-wrap">
     <h1>Books</h1>
     
-    <table style="width: 52%;">
-     <colgroup>
-      <col style="width:29%;">
-      <col style="width:50%;">
-      <col style="width:7%;">
-      <col style="width:7%;">
-      <col style="width:7%;">
-    </colgroup>
+    <table>
       <thead>
         <tr>
           <th>本のタイトル</th>
@@ -36,17 +29,16 @@
       </tbody>
     </table>
     
-  <h2>New book</h2>
-  <div class="book-form">
-    <%= form_with model: @books, url: '/books', method: :post do |f| %>
-      <h4>本のタイトル</h4>
-      <div class="field"><%= f.text_field :title %></div>
-      <h4>感想</h4>
-      <div class="field"><%= f.text_area :body %></div>
-    
-      <div class="actions"><%= f.submit '投稿' %></div>
-    <% end %>
-  </div>
+   <h2>New book</h2>
+   <%= form_with model: @books, url: '/books', method: :post do |f| %>
+     <label for="book_title">本のタイトル</iabel>
+     <div class="field"><%= f.text_field :title %></div>
+     <label for="book_body">感想</label>
+     <div class="field"><%= f.text_area :body %></div>
+      
+     <div class="actions"><%= f.submit '投稿' %></div>
+   <% end %>
+  
 
   </body>
 </html>
