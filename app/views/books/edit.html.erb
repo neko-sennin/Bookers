@@ -7,7 +7,10 @@
   <%= f.text_area :body %>
   
   <%= f.submit '編集' %>
-  <%= link_to "閲覧", edit_book_path(@book.id) %>
-  <a href="https://ad3ff278f2dc42b1a70b7ea09f17141a.vfs.cloud9.ap-northeast-1.amazonaws.com/books">戻る</a>
+  
+  <p>
+    <%= link_to "閲覧", book_path(@book.id) %> |
+    <%= link_to "戻る", books_path %>
+  </p>
   
  <% end %>

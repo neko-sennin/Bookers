@@ -15,49 +15,50 @@
  */
  
  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 10px;
+  
  }
  
- body {
-  display: block;
-  margin: 8px;
- }
- 
- h1, book-box {
-  display: block;
+ h1, h2, p {
+  font-family: verdana, arial, helvetica, sans-serif;
  }
  
  h1 {
   font-size: 25px;
  }
  
+ strong {
+    font-weight: bold;
+}
+ 
  h2 {
-  font-size: 22px;
+  font-size: 20px;
  }
  
  h4 {
-  font-size: 12px;
+  font-size: 13px;
  }
  
  p {
-  font-size: 10px;
-  padding: 10px;
+  display: block;
+  font-size: 13px;
+  padding: 8px;
  }
  
-.book-comment {
-  display: flex;
+tbody {
+ font-size: 13px;
+ line-height: 25px;
 }
 
-.book-title {
-  display: block;
-  font-size: 20px;
-  float: left;
+table{
 }
 
-.book-body {
-  display: block;
-  font-size: 20px;
-  float: left;
+.book-form {
+}
+
+.field {
+ 
+}
+
+.actions {
 }
