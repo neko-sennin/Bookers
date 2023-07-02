@@ -4,15 +4,20 @@
     
   </head>
   <body>
-    <div><%= flash[:notice] %></div>
+    <% if flash[:notice] %>
+      <p id="notice">
+        <%= flash[:notice] %>
+      </p>
+    <% end %>
+      
     <div class="book-show-list">
-      <p><strong>本のタイトル：</strong><%= @book.title %></p>
-      <p><strong>感想：</strong><%= @book.body %></p>
+      <p><strong>Title：</strong><%= @book.title %></p>
+      <p><strong>Body：</strong><%= @book.body %></p>
     </div>
 
     <p>
-      <%= link_to "編集", edit_book_path(@book.id) %> |
-      <%= link_to "戻る", books_path %>
+      <%= link_to "Edit", edit_book_path(@book.id) %> |
+      <%= link_to "Back", books_path %>
     </p>
   </body>
 </html>
